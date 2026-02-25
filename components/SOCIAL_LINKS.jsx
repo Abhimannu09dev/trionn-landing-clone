@@ -81,15 +81,12 @@ export default function SocialLinks() {
               whileHover="hover"
               className="flex items-center justify-between py-6 md:py-8 border-t border-current/15 cursor-pointer group"
             >
-              {/* Left: index + name */}
-              <div className="flex items-center gap-4 sm:gap-8">
-                <span className="text-xs opacity-30 tabular-nums w-5">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
+              <motion.div className="flex items-center gap-4 sm:gap-8">
                 <motion.h3
                   variants={{
                     initial: { x: 0 },
                     hover: {
+                      scale: 1.75,
                       x: 12,
                       transition: { duration: 0.3, ease: "easeOut" },
                     },
@@ -98,9 +95,8 @@ export default function SocialLinks() {
                 >
                   {social.name}
                 </motion.h3>
-              </div>
+              </motion.div>
 
-              {/* Right: spinning icon + arrow */}
               <div className="flex items-center gap-4">
                 <motion.div
                   variants={iconSpin}
@@ -125,7 +121,6 @@ export default function SocialLinks() {
               </div>
             </motion.a>
           ))}
-          {/* Bottom border */}
           <div className="border-t border-current/15" />
         </div>
       </div>
