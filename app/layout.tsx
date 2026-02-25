@@ -6,8 +6,8 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: {
-    default: "Your Company",
-    template: "%s | Your Company",
+    default: "Trionn Clone",
+    template: "%s | Trionn Clone",
   },
   description: "Professional digital experiences & creative services.",
   metadataBase: new URL("https://yourdomain.com"),
@@ -20,9 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
-        {children}
-      </body>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
